@@ -24,7 +24,7 @@ jobs:
         uses: docker/login-action@v4
         with:
           registry: ghcr.io # address to GitHub container registry
-          username: christian # the user triggering the workflow
+          username: christian_bjornstad # the user triggering the workflow
           password: ${{ secrets.GHCR_PUSH_TOKEN }} # The personal access token we have created earlier
       # action to build and push the image to GitHub container registry
       - name: Build and push image to GitHub container registry
@@ -32,4 +32,4 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/${{ github.actor }}/greeter:latest
+            ghcr.io/christian_bjornstad/greeter:latest
